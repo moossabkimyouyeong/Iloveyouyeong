@@ -1,10 +1,13 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사랑 고백</title>
-    <!-- Google Fonts에서 Dancing Script 불러오기 -->
+    <title>김유영 사랑해</title>
+    <!-- Google Fonts에서 Dancing Script 폰트 불러오기 -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* 기본 스타일 */
         body {
             margin: 0;
             padding: 0;
@@ -12,38 +15,38 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0c8d5; /* 부드러운 핑크 배경 */
-            font-family: 'Dancing Script', cursive; /* Dancing Script 폰트 */
+            background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* 그라디언트 배경 */
+            font-family: 'Dancing Script', cursive; /* 폰트 적용 */
         }
 
-        .container {
+        /* 메시지 스타일 */
+        h1 {
+            font-size: 5rem;
+            color: white;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* 그림자 효과 */
             text-align: center;
-            color: #e74c3c; /* 사랑스러운 빨강색 */
-            font-size: 5vw; /* 화면 크기에 비례하여 폰트 크기 조정 */
+            letter-spacing: 2px; /* 글자 간격 */
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.5); /* 배경 반투명 */
         }
 
-        .container h1 {
-            margin: 0;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
             }
         }
 
-        /* 작은 화면에서는 텍스트 크기 줄어듦 */
-        @media (max-width: 600px) {
-            .container {
-                font-size: 8vw; /* 작은 화면에서는 더 크게 보이도록 */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+                padding: 10px;
             }
         }
     </style>
-    <body>
-        <h1>김유영 ❤️🧡💛💚💙💜</h1>
-    </body>
 </head>
+<body>
+    <h1>김유영 사랑해</h1>
+</body>
+</html>
