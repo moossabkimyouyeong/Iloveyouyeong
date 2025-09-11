@@ -1,64 +1,46 @@
-<!DOCTYPE html>
-<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김유영</title>
+    <title>사랑 고백</title>
+    <!-- Google Fonts에서 Dancing Script 불러오기 -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
+            background-color: #f0c8d5; /* 부드러운 핑크 배경 */
+            font-family: 'Dancing Script', cursive; /* Dancing Script 폰트 */
         }
-        .message {
-            font-size: 36px;
-            color: #e91e63;
+
+        .container {
             text-align: center;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: scale(0.5);
-            animation: appear 2s forwards;
+            color: #e74c3c; /* 사랑스러운 빨강색 */
+            font-size: 5vw; /* 화면 크기에 비례하여 폰트 크기 조정 */
         }
-        .heart {
-            font-size: 50px;
-            color: #ff4081;
+
+        .container h1 {
+            margin: 0;
+            animation: fadeIn 3s ease-in-out;
         }
-        /* 애니메이션 정의 */
-        @keyframes appear {
+
+        @keyframes fadeIn {
             0% {
                 opacity: 0;
-                transform: scale(0.5);
             }
             100% {
                 opacity: 1;
-                transform: scale(1);
             }
         }
-        .message1 { animation-delay: 0s; }
-        .message2 { animation-delay: 3s; }
-        .message3 { animation-delay: 6s; }
-        .message4 { animation-delay: 9s; }
+
+        /* 작은 화면에서는 텍스트 크기 줄어듦 */
+        @media (max-width: 600px) {
+            .container {
+                font-size: 8vw; /* 작은 화면에서는 더 크게 보이도록 */
+            }
+        }
     </style>
 </head>
-<body>
-    <div class="message message1">
-        김유영, 나랑 언제나 함께하면 좋겠다!
-    </div>
-    <div class="message message2">
-        너랑 있으면 시간이 너무 빨리 가.
-    </div>
-    <div class="message message3">
-        매 순간이 너무 소중하고 행복해.
-    </div>
-    <div class="message message4">
-        너와 함께라면, 나의 하루는 완벽해.
-    </div>
-</body>
-</html>
