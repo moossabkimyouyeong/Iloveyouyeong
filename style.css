@@ -1,0 +1,105 @@
+:root {
+  --bg: #02050d;
+  --panel: rgba(6, 14, 28, 0.72);
+  --line: #2edbff;
+  --text: #d9e6ff;
+  --accent: #6f7bff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 50% 20%, #0a1f44 0%, #01030a 60%, #000 100%);
+  color: var(--text);
+  font-family: "Inter", "Noto Sans KR", system-ui, sans-serif;
+  overflow: hidden;
+}
+
+#app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#webcam,
+#overlay,
+#three-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#webcam {
+  object-fit: cover;
+  transform: scaleX(-1);
+  filter: contrast(1.1) saturate(1.2);
+}
+
+#overlay,
+#three-canvas {
+  pointer-events: none;
+}
+
+.hud {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 280px;
+  padding: 1rem;
+  border: 1px solid rgba(46, 219, 255, 0.45);
+  border-radius: 12px;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(46, 219, 255, 0.18);
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+}
+
+#status {
+  margin: 0.5rem 0 0.8rem;
+  color: #9de8ff;
+  min-height: 1.3rem;
+}
+
+.train-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+button {
+  border: 1px solid rgba(111, 123, 255, 0.7);
+  background: rgba(26, 34, 64, 0.8);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.55rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(45, 60, 110, 0.95);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.danger {
+  margin-top: 0.75rem;
+  width: 100%;
+  border-color: rgba(255, 90, 90, 0.7);
+  background: rgba(80, 20, 20, 0.7);
+}
+
+.current-ability strong {
+  color: #ffe97c;
+}
